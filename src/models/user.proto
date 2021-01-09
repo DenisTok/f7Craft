@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package models;
+
+option go_package = "src/models";
+
+message ProtoUser {
+    string PublicKey = 1;
+    string Name = 2;
+    string Nonce = 3;
+    string Description = 4;
+    int64 Birthday = 5; // unix time
+    string MinecraftName = 6;
+    Role Role = 7;
+    int64 Created = 8; // unix time
+    bool IsVIP  = 9;
+}
+
+enum Role {
+    Unknown = 0;
+    Creator = 1;
+    Admin = 2;
+    Moderator = 3;
+    User = 4;
+    Guest = 5;
+    Friend = 6;
+}

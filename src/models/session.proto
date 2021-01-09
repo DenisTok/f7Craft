@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package models;
+
+option go_package = "src/models";
+
+message ProtoSession {
+    string PublicKey = 1;
+    string UserAgent = 2;
+    int64 Created = 3;
+    string Token = 4;
+    string RefToken = 5;
+}
+
+message ProtoSessions {
+    repeated ProtoSession ProtoSessions = 1;
+}
